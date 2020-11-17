@@ -9,14 +9,6 @@ public class TopStories {
     private int num_results;
     private ArrayList<Results> results = new ArrayList<>();
 
-    public TopStories(){
-        this.status = null;
-        this.copyright = null;
-        this.section = null;
-        this.last_updated = null;
-        this.num_results = 0;
-        setResults();
-    }
 
     public TopStories(String status, String copyright, String section, String last_updated, int num_results, ArrayList<Results> results) {
         this.status = status;
@@ -72,8 +64,18 @@ public class TopStories {
     }
 
     public void setResults() {
-        Results results1 = new Results();
-        results.add(results1);
-        //this.results = results;
+        this.results = results;
+    }
+
+    @Override
+    public String toString() {
+        return "TopStories{" +
+                "status='" + status + '\'' +
+                ", copyright='" + copyright + '\'' +
+                ", section='" + section + '\'' +
+                ", last_updated='" + last_updated + '\'' +
+                ", num_results=" + num_results +
+                ", results=" + results +
+                '}';
     }
 }

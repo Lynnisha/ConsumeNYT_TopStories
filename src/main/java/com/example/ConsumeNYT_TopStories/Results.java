@@ -22,26 +22,6 @@ public class Results {
     private ArrayList<Multimedia> multimedia = new ArrayList<>();
     private String short_url;
 
-    public Results(){
-        this.section = null;
-        this.subsection = null;
-        this.title = null;
-        this.url = null;
-        this.uri = null;
-        this.byline = null;
-        this.item_type = null;
-        this.updated_date = null;
-        this.created_date = null;
-        this.published_date = null;
-        this.material_type_facet = null;
-        this.kicker = null;
-        this.des_facet = null;
-        this.org_facet = null;
-        this.per_facet = null;
-        this.geo_facet = null;
-        setMultimedia();
-        this.short_url = null;
-    }
     public Results(String section, String subsection, String title, String url, String uri, String byline, String item_type, String updated_date, String created_date, String published_date, String material_type_facet, String kicker, ArrayList<String> des_facet, ArrayList<String> org_facet, ArrayList<String> per_facet, ArrayList<String> geo_facet, ArrayList<Multimedia> results, String short_url) {
         this.section = section;
         this.subsection = subsection;
@@ -197,9 +177,8 @@ public class Results {
     }
 
     public void setMultimedia() {
-        Multimedia multimedia1 = new Multimedia();
-        multimedia.add(multimedia1);
-        //this.multimedia = results;
+
+        this.multimedia = multimedia;
     }
 
     public String getShort_url() {
@@ -208,5 +187,29 @@ public class Results {
 
     public void setShort_url(String short_url) {
         this.short_url = short_url;
+    }
+
+    @Override
+    public String toString() {
+        return "Results{" +
+                "section='" + section + '\'' +
+                ", subsection='" + subsection + '\'' +
+                ", title='" + title + '\'' +
+                ", url='" + url + '\'' +
+                ", uri='" + uri + '\'' +
+                ", byline='" + byline + '\'' +
+                ", item_type='" + item_type + '\'' +
+                ", updated_date='" + updated_date + '\'' +
+                ", created_date='" + created_date + '\'' +
+                ", published_date='" + published_date + '\'' +
+                ", material_type_facet='" + material_type_facet + '\'' +
+                ", kicker='" + kicker + '\'' +
+                ", des_facet=" + des_facet +
+                ", org_facet=" + org_facet +
+                ", per_facet=" + per_facet +
+                ", geo_facet=" + geo_facet +
+                ", multimedia=" + multimedia +
+                ", short_url='" + short_url + '\'' +
+                '}';
     }
 }

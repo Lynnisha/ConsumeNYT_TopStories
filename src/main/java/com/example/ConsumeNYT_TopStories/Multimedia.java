@@ -10,16 +10,6 @@ public class Multimedia {
     private String caption;
     private String copyright;
 
-    public Multimedia(){
-        this.url = null;
-        this.format = null;
-        this.height = 0;
-        this.width = 0;
-        this.type = null;
-        this.subtype = null;
-        this.caption = null;
-        this.copyright = null;
-    }
 
     public Multimedia(String url, String format, int height, int width, String type, String subtype, String caption, String copyright) {
         this.url = url;
@@ -94,5 +84,19 @@ public class Multimedia {
 
     public void setCopyright(String copyright) {
         this.copyright = copyright;
+    }
+
+    @Override
+    public String toString() {
+        return "Multimedia{" +
+                "url='" + url + '\'' +
+                ", format='" + format + '\'' +
+                ", height=" + height +
+                ", width=" + width +
+                ", type='" + type + '\'' +
+                ", subtype='" + subtype + '\'' +
+                ", caption='" + caption + '\'' +
+                ", copyright='" + copyright + '\'' +
+                '}';
     }
 }
